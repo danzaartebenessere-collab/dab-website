@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  /* Backgrounds */
+  --color-dab-background: #f7f3ec;
+  --color-dab-background-light: #fcfaf6;
+  --color-dab-white: #fffdf9;
+  --color-dab-cream: #efe7dc;
+  --color-dab-cream-dark: #e4d8c9;
+
+  /* Terracotta accent */
+  --color-dab-terracotta: #b96f50;
+  --color-dab-terracotta-soft: #d3a18b;
+  --color-dab-terracotta-light: #ead4c9;
+
+  /* Sage secondary */
+  --color-dab-sage: #8e9782;
+  --color-dab-sage-soft: #b8bead;
+  --color-dab-sage-light: #dde1d7;
+
+  /* Text */
+  --color-dab-brown: #332e2a;
+  --color-dab-brown-soft: #615a54;
+  --color-dab-text-muted: #7a716a;
+
+  /* Fonts */
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Manrope", sans-serif;
+  --font-script: "Caveat", cursive;
+
+  /* Shadows */
+  --shadow-dab: 0 18px 45px rgba(51, 46, 42, 0.08);
+
+  /* Easing */
+  --ease-dab: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Border color tokens use rgba directly since Tailwind v4 --color-* generates opaque utilities */
+:root {
+  --dab-border: rgba(51, 46, 42, 0.14);
+  --dab-border-light: rgba(51, 46, 42, 0.08);
+}
+
+@utility border-dab {
+  border-color: var(--dab-border);
+}
+
+@utility border-dab-light {
+  border-color: var(--dab-border-light);
+}
+
+/* In layer "base" così le utility (layer "utilities", es. text-dab-cream)
+   possono sempre sovrascriverle: senza @layer, CSS non annidato in un layer
+   batte qualunque regola annidata, a prescindere da specificità e ordine. */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-dab-background);
+    color: var(--color-dab-brown);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--color-dab-brown);
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  /* Visible focus ring for keyboard navigation, on brand */
+  :focus-visible {
+    outline: 2px solid var(--color-dab-terracotta);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    background: var(--color-dab-brown);
+    color: var(--color-dab-white);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0 0 0.5rem 0;
+    font-family: var(--font-sans);
+    font-weight: 600;
+  }
+
+  .skip-link:focus {
+    left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
