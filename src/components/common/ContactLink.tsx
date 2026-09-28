@@ -23,7 +23,7 @@ export function ContactLink({
     <a
       href={href}
       className={cn(
-        "group flex items-center gap-3 font-sans text-[0.98rem] transition-colors duration-300",
+        "group flex min-w-0 items-center gap-3 font-sans text-[0.98rem] transition-colors duration-300",
         tone === "inverted"
           ? "text-dab-cream hover:text-dab-white"
           : "text-dab-brown hover:text-dab-terracotta",
@@ -41,7 +41,7 @@ export function ContactLink({
       >
         {icon}
       </span>
-      <span>{label}</span>
+      <span className="min-w-0 break-words">{label}</span>
     </a>
   );
 }
