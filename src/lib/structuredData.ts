@@ -1,6 +1,6 @@
 import { siteConfig } from "../data/siteConfig";
 
-const SITE_URL = "https://www.dabseveso.it";
+const SITE_URL = siteConfig.siteUrl;
 
 export function getLocalBusinessSchema() {
   return {

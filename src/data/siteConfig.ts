@@ -3,6 +3,9 @@
 // automaticamente in tutto il sito.
 
 export const siteConfig = {
+  // Aggiorna questo indirizzo quando sarà collegato un dominio personalizzato.
+  siteUrl: "https://dabdanzaartebenessere.netlify.app",
+
   name: "DAB",
   fullName: "DAB — Danza, Arte e Benessere",
   slogan: "Benessere, energia e passione\nin un unico luogo.",

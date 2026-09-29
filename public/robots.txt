@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.dabseveso.it/sitemap.xml
+Sitemap: https://dabdanzaartebenessere.netlify.app/sitemap.xml

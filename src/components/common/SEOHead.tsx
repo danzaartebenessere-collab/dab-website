@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { siteConfig } from "../../data/siteConfig";
 
 type SEOHeadProps = {
   title: string;
@@ -9,7 +10,7 @@ type SEOHeadProps = {
   noindex?: boolean;
 };
 
-const SITE_URL = "https://www.dabseveso.it";
+const SITE_URL = siteConfig.siteUrl;
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 function setMeta(attr: "name" | "property", key: string, content: string) {
