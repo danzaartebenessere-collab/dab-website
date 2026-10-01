@@ -11,10 +11,10 @@ export function Hero() {
           testo e pulsanti ben leggibili. */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-cover bg-top opacity-[0.3]"
+        className="pointer-events-none absolute inset-0 bg-cover bg-top opacity-[0.5]"
         style={{ backgroundImage: `url(${heroDance})` }}
       />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_var(--color-dab-background)_80%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_var(--color-dab-background)_85%)]" />
 
       <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
         <motion.div
@@ -38,14 +38,14 @@ export function Hero() {
           <div className="mt-9 flex flex-col items-center gap-4">
             <Button
               to="/corsi"
-              className="w-full max-w-xs px-8 py-4 text-base shadow-[0_18px_40px_rgba(185,111,80,0.35)] transition-transform duration-300 hover:scale-[1.04] sm:max-w-sm sm:px-9 sm:py-5 sm:text-lg"
+              className="w-full max-w-[15rem] shadow-[0_18px_40px_rgba(185,111,80,0.35)] transition-transform duration-300 hover:scale-[1.04] sm:max-w-xs"
             >
               Scopri i corsi
             </Button>
             <Button
               to="/contatti"
               variant="secondary"
-              className="w-full max-w-xs border-2 border-dab-brown px-8 py-4 text-base text-dab-brown transition-transform duration-300 hover:scale-[1.04] hover:bg-dab-brown hover:text-dab-white sm:max-w-sm sm:px-9 sm:py-5 sm:text-lg"
+              className="w-full max-w-[15rem] border-2 border-dab-brown text-dab-brown transition-transform duration-300 hover:scale-[1.04] hover:bg-dab-brown hover:text-dab-white sm:max-w-xs"
             >
               Prenota una lezione di prova
             </Button>
