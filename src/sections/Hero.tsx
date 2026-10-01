@@ -6,7 +6,7 @@ import lezioneGruppo from "../assets/images/space/lezione-gruppo.jpg";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-52">
       {/* Foto reale di una lezione, molto velata: dà energia alla hero
           senza competere con testo e pulsanti. */}
       <div

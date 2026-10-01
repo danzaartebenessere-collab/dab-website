@@ -13,7 +13,7 @@ export function InsegnantiPage() {
         path="/insegnanti"
       />
 
-      <section className="pt-32 pb-20 sm:pt-40 sm:pb-24">
+      <section className="pt-32 pb-20 sm:pt-40 lg:pt-52 sm:pb-24">
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
           <SectionHeading
             eyebrow="Le persone di DAB"

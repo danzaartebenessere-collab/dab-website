@@ -17,7 +17,7 @@ export function ChiSiamoPage() {
         jsonLd={getOrganizationSchema()}
       />
 
-      <section className="pt-32 pb-20 text-center sm:pt-40 sm:pb-24">
+      <section className="pt-32 pb-20 text-center sm:pt-40 lg:pt-52 sm:pb-24">
         <motion.div
           className="mx-auto max-w-2xl px-5 sm:px-8"
           initial={{ opacity: 0, y: 20 }}

@@ -12,7 +12,7 @@ export function PrivacyPolicyPage() {
         noindex
       />
 
-      <section className="pt-32 pb-24 sm:pt-40">
+      <section className="pt-32 pb-24 sm:pt-40 lg:pt-52">
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <h1 className="text-[clamp(1.9rem,4vw,2.75rem)] text-dab-brown">Privacy Policy</h1>
 

@@ -22,9 +22,9 @@ export function Header() {
             : "border-b border-transparent bg-transparent"
         )}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-2 sm:px-8">
           <Link to="/" className="flex items-center gap-2" aria-label="DAB — Torna alla home">
-            <img src={logoColor} alt="DAB — Danza, Arte e Benessere" className="h-20 w-auto sm:h-24 lg:h-28" />
+            <img src={logoColor} alt="DAB — Danza, Arte e Benessere" className="h-24 w-auto sm:h-32 lg:h-40" />
           </Link>
 
           <nav aria-label="Navigazione principale" className="hidden lg:block">

@@ -23,7 +23,7 @@ export function CorsiPage() {
         path="/corsi"
       />
 
-      <section className="pt-32 pb-16 sm:pt-40 sm:pb-20">
+      <section className="pt-32 pb-16 sm:pt-40 lg:pt-52 sm:pb-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
             eyebrow="Le nostre attività"
