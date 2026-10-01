@@ -55,14 +55,18 @@ export function Hero() {
             {siteConfig.description}
           </p>
 
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-9 flex flex-col items-center gap-4">
             <Button
               to="/corsi"
-              className="px-8 py-4 text-base shadow-[0_18px_40px_rgba(185,111,80,0.35)] transition-transform duration-300 hover:scale-[1.04] sm:px-9 sm:py-5 sm:text-lg"
+              className="w-full max-w-xs px-8 py-4 text-base shadow-[0_18px_40px_rgba(185,111,80,0.35)] transition-transform duration-300 hover:scale-[1.04] sm:max-w-sm sm:px-9 sm:py-5 sm:text-lg"
             >
               Scopri i corsi
             </Button>
-            <Button to="/contatti" variant="secondary">
+            <Button
+              to="/contatti"
+              variant="secondary"
+              className="w-full max-w-xs border-2 border-dab-brown px-8 py-4 text-base text-dab-brown transition-transform duration-300 hover:scale-[1.04] hover:bg-dab-brown hover:text-dab-white sm:max-w-sm sm:px-9 sm:py-5 sm:text-lg"
+            >
               Prenota una lezione di prova
             </Button>
           </div>
