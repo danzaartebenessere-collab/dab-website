@@ -2,39 +2,19 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { siteConfig } from "../data/siteConfig";
 import { Button } from "../components/ui/Button";
+import heroDance from "../assets/images/hero-dance-ai.webp";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-52">
-      {/* Forme astratte decorative: richiamano il movimento con colori
-          del brand, senza bisogno di una fotografia. */}
-      <svg
+      {/* Immagine generata con IA: persone che ballano, velata per lasciare
+          testo e pulsanti ben leggibili. */}
+      <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-32 -top-20 h-[560px] w-[560px] text-dab-sage-light opacity-70 sm:-right-16"
-        viewBox="0 0 400 400"
-      >
-        <path
-          d="M60 320 C 20 240, 80 120, 180 90 S 360 120, 340 220 S 220 360, 140 340 S 60 320, 60 320 Z"
-          fill="currentColor"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-28 bottom-0 h-[380px] w-[480px] text-dab-terracotta-light opacity-80"
-        viewBox="0 0 480 380"
-      >
-        <path
-          d="M0 260 C 90 180, 170 320, 260 240 S 420 140, 480 220 L 480 380 L 0 380 Z"
-          fill="currentColor"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-24 h-64 w-64 -translate-x-1/2 text-dab-cream-dark opacity-60 sm:top-16"
-        viewBox="0 0 200 200"
-      >
-        <circle cx="100" cy="100" r="98" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 10" />
-      </svg>
+        className="pointer-events-none absolute inset-0 bg-cover bg-top opacity-[0.3]"
+        style={{ backgroundImage: `url(${heroDance})` }}
+      />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_var(--color-dab-background)_80%)]" />
 
       <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
         <motion.div
