@@ -3,7 +3,6 @@ import { getLocalBusinessSchema, getOrganizationSchema } from "../lib/structured
 import { Hero } from "../sections/Hero";
 import { SpaceGallerySection } from "../sections/SpaceGallerySection";
 import { IntroSection } from "../sections/IntroSection";
-import { MissionVisionBlock } from "../sections/MissionVisionBlock";
 import { CoursesPreview } from "../sections/CoursesPreview";
 import { TeachersPreview } from "../sections/TeachersPreview";
 import { BookingSection } from "../sections/BookingSection";
@@ -23,7 +22,6 @@ export function HomePage() {
       <Hero />
       <SpaceGallerySection />
       <IntroSection />
-      <MissionVisionBlock />
       <CoursesPreview />
       <TeachersPreview />
       <BookingSection />

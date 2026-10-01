@@ -136,10 +136,6 @@
   animation: dab-scroll 38s linear infinite;
 }
 
-.dab-scroll-track:hover {
-  animation-play-state: paused;
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

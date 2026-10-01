@@ -2,32 +2,19 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { siteConfig } from "../data/siteConfig";
 import { Button } from "../components/ui/Button";
+import lezioneGruppo from "../assets/images/space/lezione-gruppo.jpg";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
-      {/* Forma curva decorativa, richiama il movimento senza essere invasiva */}
-      <svg
+      {/* Foto reale di una lezione, molto velata: dà energia alla hero
+          senza competere con testo e pulsanti. */}
+      <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-24 top-10 h-[420px] w-[420px] text-dab-sage-light opacity-60 sm:-right-10"
-        viewBox="0 0 400 400"
-      >
-        <path
-          d="M60 320 C 20 240, 80 120, 180 90 S 360 120, 340 220 S 220 360, 140 340 S 60 320, 60 320 Z"
-          fill="currentColor"
-        />
-      </svg>
-
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-16 bottom-0 h-40 w-[280px] text-dab-terracotta-light opacity-70"
-        viewBox="0 0 280 140"
-      >
-        <path
-          d="M0 90 C 50 60, 90 120, 140 90 S 230 60, 280 90 L 280 140 L 0 140 Z"
-          fill="currentColor"
-        />
-      </svg>
+        className="pointer-events-none absolute inset-0 bg-cover bg-top opacity-[0.14]"
+        style={{ backgroundImage: `url(${lezioneGruppo})` }}
+      />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_var(--color-dab-background)_72%)]" />
 
       <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
         <motion.div

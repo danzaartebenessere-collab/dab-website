@@ -4,17 +4,17 @@ import spazioAllenamento from "../../assets/images/space/spazio-allenamento.jpg"
 import lezioneGruppo from "../../assets/images/space/lezione-gruppo.jpg";
 
 const photos = [
-  { src: lezioneGruppo, alt: "Una lezione di gruppo negli spazi di DAB" },
   { src: ingresso, alt: "L'ingresso di DAB a Seveso" },
   { src: reception, alt: "La reception di DAB" },
   { src: spazioAllenamento, alt: "La sala allenamento di DAB" },
+  { src: lezioneGruppo, alt: "Una lezione di gruppo negli spazi di DAB" },
 ];
 
 // Striscia fotografica cinematografica a scorrimento continuo: le foto reali
 // dello spazio DAB scorrono a tutta larghezza, velate da un overlay scuro con
 // una scritta sopra, come l'insegna luminosa di una scuola di ballo.
-// In pausa al passaggio del mouse; ferma per chi preferisce meno animazioni
-// (vedi prefers-reduced-motion in index.css).
+// Ferma solo per chi preferisce meno animazioni (vedi prefers-reduced-motion
+// in index.css), non si interrompe al passaggio del mouse.
 export function PhotoGallery() {
   const loop = [...photos, ...photos];
 

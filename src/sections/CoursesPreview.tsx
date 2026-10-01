@@ -15,7 +15,7 @@ export function CoursesPreview() {
             title="Trova il tuo movimento"
             description="Attività diverse, unite dallo stesso obiettivo: aiutarti a stare bene, divertirti e dedicare tempo a te."
           />
-          <Button to="/corsi" variant="secondary" className="hidden sm:inline-flex">
+          <Button to="/corsi" className="hidden sm:inline-flex">
             Tutti i corsi
           </Button>
         </div>
@@ -26,7 +26,7 @@ export function CoursesPreview() {
           ))}
         </div>
 
-        <Button to="/corsi" variant="secondary" className="mt-10 w-full justify-center sm:hidden">
+        <Button to="/corsi" className="mt-10 w-full justify-center sm:hidden">
           Tutti i corsi
         </Button>
       </div>
