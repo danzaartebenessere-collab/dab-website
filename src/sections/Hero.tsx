@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { Sparkles, ArrowRight } from "lucide-react";
 import { siteConfig } from "../data/siteConfig";
 import { Button } from "../components/ui/Button";
 import lezioneGruppo from "../assets/images/space/lezione-gruppo.jpg";
@@ -11,10 +11,10 @@ export function Hero() {
           senza competere con testo e pulsanti. */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-cover bg-top opacity-[0.14]"
+        className="pointer-events-none absolute inset-0 bg-cover bg-top opacity-[0.26]"
         style={{ backgroundImage: `url(${lezioneGruppo})` }}
       />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_var(--color-dab-background)_72%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_var(--color-dab-background)_80%)]" />
 
       <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
         <motion.div
@@ -35,8 +35,14 @@ export function Hero() {
             {siteConfig.description}
           </p>
 
-          <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <Button to="/corsi">Scopri i corsi</Button>
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+            <Button
+              to="/corsi"
+              className="group px-8 py-4 text-base shadow-[0_18px_40px_rgba(185,111,80,0.35)] transition-transform duration-300 hover:scale-[1.04] sm:px-9 sm:py-5 sm:text-lg"
+            >
+              Scopri i corsi
+              <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
             <Button to="/contatti" variant="secondary">
               Prenota una lezione di prova
             </Button>
