@@ -24,7 +24,7 @@ export function Header() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8">
           <Link to="/" className="flex items-center gap-2" aria-label="DAB — Torna alla home">
-            <img src={logoColor} alt="DAB — Danza, Arte e Benessere" className="h-11 w-auto sm:h-12" />
+            <img src={logoColor} alt="DAB — Danza, Arte e Benessere" className="h-14 w-auto sm:h-16" />
           </Link>
 
           <nav aria-label="Navigazione principale" className="hidden lg:block">

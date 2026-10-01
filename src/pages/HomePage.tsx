@@ -1,6 +1,7 @@
 import { SEOHead } from "../components/common/SEOHead";
 import { getLocalBusinessSchema, getOrganizationSchema } from "../lib/structuredData";
 import { Hero } from "../sections/Hero";
+import { SpaceGallerySection } from "../sections/SpaceGallerySection";
 import { IntroSection } from "../sections/IntroSection";
 import { MissionVisionBlock } from "../sections/MissionVisionBlock";
 import { CoursesPreview } from "../sections/CoursesPreview";
@@ -20,6 +21,7 @@ export function HomePage() {
         jsonLd={[getLocalBusinessSchema(), getOrganizationSchema()]}
       />
       <Hero />
+      <SpaceGallerySection />
       <IntroSection />
       <MissionVisionBlock />
       <CoursesPreview />
