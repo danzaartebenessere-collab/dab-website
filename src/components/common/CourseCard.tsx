@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Clock, Users } from "lucide-react";
+import { ArrowUpRight, Clock, Users, Dumbbell, Music2, Sparkles, CalendarHeart } from "lucide-react";
+import type { ComponentType } from "react";
 import type { Course } from "../../types";
 import { cn } from "../../lib/utils";
 
@@ -16,7 +17,17 @@ const categoryTone: Record<string, string> = {
   "Su richiesta": "bg-dab-cream text-dab-brown",
 };
 
+const categoryVisual: Record<string, { gradient: string; icon: ComponentType<{ className?: string; strokeWidth?: number }> }> = {
+  "Tonificazione & Benessere": { gradient: "from-dab-sage to-dab-brown", icon: Dumbbell },
+  "Balli di coppia": { gradient: "from-dab-terracotta to-dab-brown", icon: Music2 },
+  "Bambini & Teen": { gradient: "from-dab-terracotta-soft to-dab-sage", icon: Sparkles },
+  "Su richiesta": { gradient: "from-dab-brown-soft to-dab-brown", icon: CalendarHeart },
+};
+
 export function CourseCard({ course, index = 0 }: CourseCardProps) {
+  const visual = categoryVisual[course.category] ?? categoryVisual["Su richiesta"];
+  const Icon = visual.icon;
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -25,6 +36,27 @@ export function CourseCard({ course, index = 0 }: CourseCardProps) {
       transition={{ duration: 0.5, delay: (index % 4) * 0.08, ease: [0.22, 1, 0.36, 1] }}
       className="group flex flex-col overflow-hidden rounded-3xl border border-dab-border bg-dab-white transition-shadow duration-300 hover:shadow-dab"
     >
+      <div
+        className={cn(
+          "relative flex h-32 items-center justify-center overflow-hidden bg-gradient-to-br",
+          visual.gradient
+        )}
+      >
+        <svg
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 h-full w-full text-dab-white/10"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <pattern id={`diag-${course.id}`} width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+              <line x1="0" y1="0" x2="0" y2="26" stroke="currentColor" strokeWidth="10" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill={`url(#diag-${course.id})`} />
+        </svg>
+        <Icon className="relative h-10 w-10 text-dab-white" strokeWidth={1.5} />
+      </div>
+
       <div className="flex flex-1 flex-col gap-3 p-6">
         <span
           className={cn(
