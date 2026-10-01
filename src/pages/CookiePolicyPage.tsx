@@ -1,4 +1,3 @@
-import { AlertTriangle } from "lucide-react";
 import { SEOHead } from "../components/common/SEOHead";
 import { siteConfig } from "../data/siteConfig";
 
@@ -16,16 +15,9 @@ export function CookiePolicyPage() {
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <h1 className="text-[clamp(1.9rem,4vw,2.75rem)] text-dab-brown">Cookie Policy</h1>
 
-          <div className="mt-6 flex items-start gap-3 rounded-2xl border border-dab-terracotta/30 bg-dab-terracotta-light/40 p-5">
-            <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-dab-terracotta" strokeWidth={1.75} />
-            <p className="text-sm leading-relaxed text-dab-brown">
-              Questo testo è una bozza informativa generica e non costituisce consulenza legale.
-              Prima della pubblicazione definitiva del sito, fai verificare questo documento da un
-              consulente privacy/legale in conformità al GDPR e alla normativa italiana applicabile.
-            </p>
-          </div>
+          <p className="mt-6 text-sm text-dab-text-muted">Ultimo aggiornamento: ottobre 2026</p>
 
-          <div className="mt-10 flex flex-col gap-8 text-[0.98rem] leading-relaxed text-dab-brown-soft">
+          <div className="mt-8 flex flex-col gap-8 text-[0.98rem] leading-relaxed text-dab-brown-soft">
             <div>
               <h2 className="mb-2 font-display text-xl text-dab-brown">Cosa sono i cookie</h2>
               <p>

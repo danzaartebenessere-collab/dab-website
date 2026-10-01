@@ -1,4 +1,3 @@
-import { AlertTriangle } from "lucide-react";
 import { SEOHead } from "../components/common/SEOHead";
 import { siteConfig } from "../data/siteConfig";
 
@@ -16,16 +15,9 @@ export function PrivacyPolicyPage() {
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <h1 className="text-[clamp(1.9rem,4vw,2.75rem)] text-dab-brown">Privacy Policy</h1>
 
-          <div className="mt-6 flex items-start gap-3 rounded-2xl border border-dab-terracotta/30 bg-dab-terracotta-light/40 p-5">
-            <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-dab-terracotta" strokeWidth={1.75} />
-            <p className="text-sm leading-relaxed text-dab-brown">
-              Questo testo è una bozza informativa generica e non costituisce consulenza legale.
-              Prima della pubblicazione definitiva del sito, fai verificare questo documento da un
-              consulente privacy/legale in conformità al GDPR e alla normativa italiana applicabile.
-            </p>
-          </div>
+          <p className="mt-6 text-sm text-dab-text-muted">Ultimo aggiornamento: ottobre 2026</p>
 
-          <div className="prose-content mt-10 flex flex-col gap-8 text-[0.98rem] leading-relaxed text-dab-brown-soft">
+          <div className="prose-content mt-8 flex flex-col gap-8 text-[0.98rem] leading-relaxed text-dab-brown-soft">
             <div>
               <h2 className="mb-2 font-display text-xl text-dab-brown">Titolare del trattamento</h2>
               <p>
@@ -41,18 +33,22 @@ export function PrivacyPolicyPage() {
             <div>
               <h2 className="mb-2 font-display text-xl text-dab-brown">Dati raccolti</h2>
               <p>
-                Attraverso il modulo di contatto e prenotazione raccogliamo i dati che l'utente
-                fornisce volontariamente: nome, cognome, email, telefono, corso di interesse,
-                fascia oraria preferita ed eventuale messaggio.
+                Questo sito non raccoglie dati personali tramite moduli propri. Per prenotare una
+                lezione di prova, il modulo "Vai al modulo di prenotazione" rimanda a un Google
+                Form esterno: i dati inseriti lì (nome, contatti, corso di interesse) sono raccolti
+                e trattati direttamente da Google LLC secondo la sua informativa privacy, e sono
+                consultati da {siteConfig.fullName} al solo scopo di gestire la richiesta. Se scrivi
+                via email, telefono o WhatsApp, trattiamo i dati che ci fornisci volontariamente in
+                quel messaggio (es. nome, contatti, richiesta).
               </p>
             </div>
 
             <div>
               <h2 className="mb-2 font-display text-xl text-dab-brown">Finalità del trattamento</h2>
               <p>
-                I dati vengono utilizzati per rispondere alle richieste di informazioni, gestire
-                prenotazioni di lezioni di prova e, solo previo consenso facoltativo, per inviare
-                comunicazioni relative a corsi ed eventi DAB.
+                I dati raccolti tramite il Google Form o i canali di contatto diretto vengono
+                utilizzati esclusivamente per rispondere alle richieste di informazioni e gestire
+                prenotazioni di lezioni di prova o iscrizioni ai corsi.
               </p>
             </div>
 
@@ -62,7 +58,8 @@ export function PrivacyPolicyPage() {
                 Il trattamento si basa sul consenso dell'interessato e sull'esecuzione di misure
                 precontrattuali richieste dallo stesso. I dati sono conservati per il tempo
                 necessario a evadere la richiesta e, in caso di iscrizione ai corsi, per la durata
-                del rapporto e nei termini previsti dalla legge.
+                del rapporto e nei termini previsti dalla legge. Per i dati raccolti tramite Google
+                Form si applicano anche i termini di conservazione della piattaforma Google.
               </p>
             </div>
 
